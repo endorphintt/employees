@@ -18,9 +18,9 @@ const columns: ColumnsType<Employee> = [
         key: 'firstName'
     },
     {
-        title: 'Age',
-        dataIndex: 'Age',
-        key: 'Age'
+        title: 'age',
+        dataIndex: 'age',
+        key: 'age'
     },
     {
         title: 'address',
@@ -34,6 +34,10 @@ export const Employees = () => {
     const user = useSelector(selectUser)
     const { data, isLoading } = useGetAllEmployeesQuery();
 
+    const goToAddUser = () => {
+        nav(Paths.employeeAdd)
+    }
+
     useEffect(() => {
         if(!user) {
             nav('/login')
@@ -42,7 +46,7 @@ export const Employees = () => {
 
     return (
        <Layout>
-            <Button type='primary' onClick={() => null} icon={ <PlusCircleOutlined/>}>
+            <Button type='primary' onClick={ goToAddUser } icon={ <PlusCircleOutlined/>}>
                 ADD EMPLOYEE
             </Button>
             <Table

@@ -11,6 +11,8 @@ import { Register } from './pages/register/register';
 import { ConfigProvider, theme } from 'antd';
 import { Auth } from './features/auth/auth';
 import { Employees } from './pages/employees/Employess';
+import AddEmployee from './pages/addEmployee/AddEmployee';
+import Status from './pages/status/status';
 
 const router = createBrowserRouter([
   { 
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   { 
     path: Paths.register,
     element: <Register />
+  },
+  { 
+    path: Paths.employeeAdd,
+    element: <AddEmployee />
+  },
+  { 
+    path: `${Paths.status}/:status`,
+    element: <Status/>
   },
 ])
 
