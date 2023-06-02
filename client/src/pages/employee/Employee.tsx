@@ -70,7 +70,7 @@ export default function Employee() {
                     <>
                         <Divider orientation='left'>actions</Divider>
                         <Space>
-                            <Link to={ `/employee/edit/${data.id}`}>
+                            <Link to={ `/employees/edit/${data.id}`}>
                                 <Button
                                     shape='round'
                                     type='default'
