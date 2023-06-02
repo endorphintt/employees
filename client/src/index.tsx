@@ -13,6 +13,7 @@ import { Auth } from './features/auth/auth';
 import { Employees } from './pages/employees/Employess';
 import AddEmployee from './pages/addEmployee/AddEmployee';
 import Status from './pages/status/status';
+import Employee from './pages/employee/Employee';
 
 const router = createBrowserRouter([
   { 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   { 
     path: `${Paths.status}/:status`,
     element: <Status/>
+  },
+  { 
+    path: `${Paths.employee}/:id`,
+    element: <Employee/>
   },
 ])
 
